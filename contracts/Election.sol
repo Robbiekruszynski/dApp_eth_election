@@ -1,6 +1,5 @@
 pragma solidity ^0.5.0;
 
-
 contract Election {
     // Model a Candidate
     struct Candidate {
@@ -27,12 +26,13 @@ contract Election {
         addCandidate("Candidate 2");
     }
 
-    function addCandidate (string _name) private {
+    function addCandidate (string memory _name) private {
         candidatesCount ++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
 
     function vote (uint _candidateId) public {
+
         // require that they haven't voted before
         require(!voters[msg.sender]);
 
@@ -48,3 +48,4 @@ contract Election {
         // trigger voted event
         emit votedEvent(_candidateId);
     }
+}
