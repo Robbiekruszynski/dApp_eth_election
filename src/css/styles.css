@@ -1,0 +1,33 @@
+body{
+background-color:grey;
+}
+
+
+
+h1{
+color:black;
+}
+
+
+form{
+  display:flex;
+  flex-direction:column;
+}
+
+
+.button{
+background-image: url("/images/light.gif");
+
+background-color: black;
+color:white;
+border:1px solid black;
+border-radius: 20px;
+}
+
+#accountAddress {
+  margin-top: 50px;
+  border:1px solid #ad5296;
+  background-color: #ad5296;
+  color:white;
+  border-radius: 10px;
+}
